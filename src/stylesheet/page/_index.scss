@@ -1,0 +1,31 @@
+.clock {
+  position: relative;
+  width: 500px;
+  max-width: 500px;
+  height: 500px;
+  background-image: url('../images/clock-bg.svg');
+  background-position: center center;
+}
+.hand {
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transition: all 0.05s;
+  transition-timing-function: cubic-bezier(0.35, 2.65, 1, 1);
+}
+.hour-hand {
+    transform: translateY(-85%);
+    transform-origin: 0 50%;
+    z-index: 10;
+}
+.min-hand {
+    transform: translate(-50%, -100%);
+    transform-origin: 50% 100%;
+    z-index: 100;
+}
+.sec-hand {
+  transform: translateX(-50%);
+  transform-origin: 50% 0;
+  z-index: 1;
+}
